@@ -4,6 +4,13 @@
    --background-color: #eeeff1;
     
 }
+#menu-toggle {
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 *{
     margin: 0;
@@ -138,6 +145,7 @@ nav ul li a:hover::after{
         
     }
     
+    
     .container h1 {
         font-size: 2em;
         font-weight: bold;
@@ -194,11 +202,13 @@ nav ul li a:hover::after{
 /* Section 3 skills*/
 
 .skills-section {
+    
     padding: 0 50px;
     margin-bottom: 100px;
 
 }
 .skills-section h2 {
+    
     text-align: center;
     font-size: 35px;
 }
@@ -231,10 +241,10 @@ nav ul li a:hover::after{
     align-items: center;
     
     width: 200px;
-    padding: 5px 20px;
+    padding: 1px 10px;
     margin:10px;
     border: 1.5px solid #d3d3d3;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .download-btn {
@@ -447,149 +457,155 @@ nav ul li a:hover::after{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive Design for Screens < 768px */
-
-/* Media query for screens smaller than 768px */
-@media screen and (max-width: 768px) {
-
-    /* Header and Navigation */
-    nav {
+@media (max-width: 768px) {
+    .cards-container, .project-container {
         flex-direction: column;
-        align-items: flex-start; /* Align links to the left */
+        gap: 20px;
     }
-    
+    .card, .project-card {
+        width: 100%;
+    }
+
+   #about .container {
+    height: 70%;
+
+   }
+
+   .skills-section h2 {
+    height: 10%
+   }
+}
+@media (max-width: 768px) {
     nav ul {
         display: flex;
-        flex-direction: column; /* Stack navbar links vertically */
-        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 10px 0;
     }
-
-    /* Person Section */
-    .person {
-        height: 50vh; /* Adjust the height of the .person section */
-        padding: 0 20px;
-        text-align: justify; 
-       
-    }
-
-    .text {
-        font-size: 1.2em; /* Adjust font size for smaller screens */
-        text-align: center; /* Ensure text is centered */
-        padding: 0 10px;
-    }
-
-    /* About Section */
-    #about {
-        height: auto; /* Allow the section to grow as needed */
-        padding: 20px 0; /* Add padding around the section */
-    }
-
-    .cards-container {
-        flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center the cards */
-    }
-
-    .card {
-        width: 90%; /* Make each card take full width on small screens */
-        margin-bottom: 20px; /* Add spacing between cards */
-    }
-
-    .card h2 {
-        font-size: 1.5em; /* Adjust the font size of card headings */
-    }
-
-    .card-content p {
-        font-size: 0.9em; /* Reduce font size for smaller screens */
-    }
-
-    /* Adjust the font size of headings */
-    .container h1 {
-        font-size: 1.5em; /* Reduce the heading size */
-    }
-
-    /* Styling for text inside the .person section */
-    .person .text {
-        font-size: 1em;
-        padding: 10px;
-    }
-}
-
-/* Media query for even smaller devices, like phones in portrait mode (max-width: 480px) */
-@media screen and (max-width: 480px) {
 
     nav ul li a {
-        font-size: 16px; /* Smaller font size for links */
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 768px) {
+    .skills-section .cells {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-section .cell {
+        width: 100%; /* Full width on small screens */
+    }
+}
+@media (max-width: 768px) {
+    .contact-form input, 
+    .contact-form textarea, 
+    .contact-form button {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
     }
 
     .person {
-        height: 40vh; /* Further reduce height for mobile */
-        padding: 0 10px;
+        margin: 50px 0;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+}
+@media (max-width: 768px) {
+    /* Hamburger button visible on smaller screens */
+    #menu-toggle {
+        display: block;
     }
 
-    .text {
-        font-size: 1em;
-        line-height: 1.4; /* Increase line height for better readability */
+    #nav-menu {
+        display: none;
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%; /* Full width of the viewport */
+        background-color: rgb(240, 248, 250);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
 
-    .cards-container {
-        padding: 10px; /* Add padding around cards */
+    /* Show the menu when the "open" class is applied */
+    #nav-menu.open {
+        display: flex;
     }
 
-    .card {
-        width: 100%; /* Make cards full width on small screens */
+    #nav-menu li {
+        text-align: center;
+        margin: 15px 0;
     }
 
-    .container h1 {
-        font-size: 1.3em; /* Adjust heading font size */
+    #nav-menu a {
+        font-size: 18px;
+        padding: 10px;
     }
 
-    .card-content p {
-        font-size: 0.9em; /* Reduce font size for smaller text */
+
+
+    .skills-section .cells .cell {
+      
+        
+        width: 30%; /* 2 skills per row on mobile */
+        /* Ensure there's space between the cells */
+
     }
+
 }
 
 
-    
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
