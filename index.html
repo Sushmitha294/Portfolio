@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
-<body>
+<body id="home">
    
-    <div id="header" id="home">
+    <div id="header"   >
         <div class="container">
     <!--NAVBAR-->
     <nav>
@@ -136,13 +136,62 @@
       </section>
 
       <!--SECTION 4 : Project-->
-      <section id="project">
+      <section id="project" class="portfolio-section">
+        <h2 id="project">Projects </h2>
+        <div class="project-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="/project-images/todo-app.jpg"  alt="Project 1" class="project-image">
+                <div class="project-details">
+                    <h3 class="project-title">ToDo-App</h3>
+                    <p class="project-description">A brief description of the project goes here.</p>
+                    <a href="https://github.com/Sushmitha294/ToDo-App" target="_blank" class="project-link">Github</a>
+                    <a href="https://todo-application1e.netlify.app/" target="_blank" class="project-link">Demo</a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="/project-images/emp.png" alt="Project 2" class="project-image">
+                <div class="project-details">
+                    <h3 class="project-title">Employee Management</h3>
+                    <p class="project-description">A brief description of the project goes here.</p>
+                    <a href="https://github.com/Sushmitha294/Employee-management" target="_blank" class="project-link">Github</a>
+                    <a href="#" class="project-link">Demo</a>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
 
       </section>
      
 
       <!--SECTION 5 : Contact-->
-      <section id="contact">
+      <section >
+        
+        <div id="contact" class="contact-section">
+            <h2>Contact </h2>
+            <p>If you have any questions or would like to work together, feel free to reach out!</p>
+        
+            <!-- Contact Form -->
+            <form class="contact-form" action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="contact-button">Send Message</button>
+            </form>
+        
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <p>Email: <a href="#">sushmithashiva8@gmail.com</a></p>
+                <p>Phone: <a href="#">8310839553</a></p>
+                <p>
+                    Connect with me:
+                    <a href="https://github.com/Sushmitha294" target="_blank">GitHub</a> |
+                    <a href="https://www.linkedin.com/in/sushmitha-s-a83bab205/" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+        
 
       </section>
      
